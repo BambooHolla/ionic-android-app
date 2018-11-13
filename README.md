@@ -10,3 +10,10 @@
     1. > 解决办法：cordova plugin add cordova-android-support-gradle-release --fetch
     2. > cordova platform rm android
     3. > cordova platform add android
+
+* 注：由于android 8 系统，将私有空间不再提供使用情况下，使得如果使用热更新，需要把下载的安装包放置于手机目录中，并需要修改`AndroidManifest.xml`中 
+```
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26" />
+改为
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23" />
+```
